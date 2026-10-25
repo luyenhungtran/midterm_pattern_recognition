@@ -45,3 +45,26 @@ def load_mnist():
         _read_images(p["test_images"]),
         _read_labels(p["test_labels"])
     )
+
+def flatten(X):
+    """(N, 28, 28) -> (N, 784)"""
+    return X.reshape(len(X), -1)
+
+def normalize(X):
+    """uint8 [0, 255] -> float32 [0, 1]"""
+    return X.astype(np.float32) / 255.0
+
+def preprocess(X):
+    return flatten(normalize(X))
+
+def one_hot(y, num_classes=10):
+    out = np.zeros((len(y), num_classes), dtype=np.float32)
+    out[np.arange(len(y)), y] = 1.0
+    return out
+
+def load_prepared_mnist():
+    X_train, y_train, X_test, y_test = load_mnist()
+    X_train, X_test = preprocess(X_train), preprocess(X_test)
+    y_train = one_hot(y_train)
+    y_test = one_hot(y_test)
+    return X_train, y_train, X_test, y_test
