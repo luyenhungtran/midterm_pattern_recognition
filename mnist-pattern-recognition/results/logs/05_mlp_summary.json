@@ -1,0 +1,452 @@
+{
+  "seed": 42,
+  "environment": {
+    "python": "3.14.7",
+    "numpy": "2.5.4",
+    "sklearn": "1.9.1"
+  },
+  "config": {
+    "hidden": [
+      256,
+      128
+    ],
+    "lr": 0.08,
+    "epochs": 20,
+    "batch": 256,
+    "l2": 0.0001,
+    "n_sub": 12000,
+    "sub_epochs": 8,
+    "probe_size": 10000
+  },
+  "dataset": {
+    "n_train": 54000,
+    "n_val": 6000,
+    "n_test": 10000,
+    "n_sub": 12000
+  },
+  "main_comparison": {
+    "custom": {
+      "accuracy": 0.9753,
+      "precision_macro": 0.9751882044067832,
+      "recall_macro": 0.9750200981332435,
+      "f1_macro": 0.9750862245310892,
+      "n_params": 235146,
+      "train_time": 81.23903870012145,
+      "infer_time": 0.12497270002495497
+    },
+    "sklearn": {
+      "accuracy": 0.9728,
+      "precision_macro": 0.9726364955193981,
+      "recall_macro": 0.9725398181995863,
+      "f1_macro": 0.9725600245506634,
+      "n_params": 235146,
+      "train_time": 44.961458800244145,
+      "infer_time": 0.052808100008405745
+    },
+    "backprop_max_abs_dW": 2.9802322387695312e-08,
+    "alpha_mapping": {
+      "alpha_default": 1.4185905456542969e-05,
+      "alpha_matched": 2.9802322387695312e-08
+    },
+    "mcnemar": {
+      "b": 75,
+      "c": 50,
+      "p_value": 0.031409333566700115,
+      "disagree": 144,
+      "both_wrong": 197,
+      "ensemble_accuracy": 0.9752
+    }
+  },
+  "experiments": [
+    {
+      "name": "lr=0.01",
+      "factor": "learning_rate",
+      "value": 0.01,
+      "kind": "custom",
+      "val_acc": 0.8493333333333334,
+      "test_acc": 0.8569,
+      "train_time": 5.07513860007748,
+      "epochs": 8
+    },
+    {
+      "name": "lr=0.01 (sklearn)",
+      "factor": "learning_rate",
+      "value": 0.01,
+      "kind": "sklearn",
+      "val_acc": 0.8433333333333334,
+      "test_acc": 0.8561,
+      "train_time": 3.730570700019598,
+      "epochs": 8
+    },
+    {
+      "name": "lr=0.02",
+      "factor": "learning_rate",
+      "value": 0.02,
+      "kind": "custom",
+      "val_acc": 0.883,
+      "test_acc": 0.8933,
+      "train_time": 5.698282900033519,
+      "epochs": 8
+    },
+    {
+      "name": "lr=0.02 (sklearn)",
+      "factor": "learning_rate",
+      "value": 0.02,
+      "kind": "sklearn",
+      "val_acc": 0.8836666666666667,
+      "test_acc": 0.8897,
+      "train_time": 3.8950224998407066,
+      "epochs": 8
+    },
+    {
+      "name": "lr=0.05",
+      "factor": "learning_rate",
+      "value": 0.05,
+      "kind": "custom",
+      "val_acc": 0.91,
+      "test_acc": 0.9176,
+      "train_time": 5.679586999933235,
+      "epochs": 8
+    },
+    {
+      "name": "lr=0.05 (sklearn)",
+      "factor": "learning_rate",
+      "value": 0.05,
+      "kind": "sklearn",
+      "val_acc": 0.9076666666666666,
+      "test_acc": 0.9166,
+      "train_time": 3.1875253000762314,
+      "epochs": 8
+    },
+    {
+      "name": "lr=0.08",
+      "factor": "learning_rate",
+      "value": 0.08,
+      "kind": "custom",
+      "val_acc": 0.9185,
+      "test_acc": 0.9267,
+      "train_time": 5.212468699901365,
+      "epochs": 8
+    },
+    {
+      "name": "lr=0.08 (sklearn)",
+      "factor": "learning_rate",
+      "value": 0.08,
+      "kind": "sklearn",
+      "val_acc": 0.9155,
+      "test_acc": 0.9252,
+      "train_time": 3.4421500001335517,
+      "epochs": 8
+    },
+    {
+      "name": "lr=0.15",
+      "factor": "learning_rate",
+      "value": 0.15,
+      "kind": "custom",
+      "val_acc": 0.933,
+      "test_acc": 0.9394,
+      "train_time": 5.790478199953213,
+      "epochs": 8
+    },
+    {
+      "name": "lr=0.15 (sklearn)",
+      "factor": "learning_rate",
+      "value": 0.15,
+      "kind": "sklearn",
+      "val_acc": 0.9298333333333333,
+      "test_acc": 0.9363,
+      "train_time": 4.0292339998995885,
+      "epochs": 8
+    },
+    {
+      "name": "lr=0.3",
+      "factor": "learning_rate",
+      "value": 0.3,
+      "kind": "custom",
+      "val_acc": 0.9483333333333334,
+      "test_acc": 0.9508,
+      "train_time": 5.236199999926612,
+      "epochs": 8
+    },
+    {
+      "name": "lr=0.3 (sklearn)",
+      "factor": "learning_rate",
+      "value": 0.3,
+      "kind": "sklearn",
+      "val_acc": 0.946,
+      "test_acc": 0.949,
+      "train_time": 4.046320800087415,
+      "epochs": 8
+    },
+    {
+      "name": "hidden=(64,)",
+      "factor": "hidden_units",
+      "value": "(64,)",
+      "kind": "custom",
+      "val_acc": 0.9061666666666667,
+      "test_acc": 0.9114,
+      "train_time": 1.446618199814111,
+      "epochs": 8
+    },
+    {
+      "name": "hidden=(128,)",
+      "factor": "hidden_units",
+      "value": "(128,)",
+      "kind": "custom",
+      "val_acc": 0.9083333333333333,
+      "test_acc": 0.9118,
+      "train_time": 1.9423881999682635,
+      "epochs": 8
+    },
+    {
+      "name": "hidden=(256,)",
+      "factor": "hidden_units",
+      "value": "(256,)",
+      "kind": "custom",
+      "val_acc": 0.9103333333333333,
+      "test_acc": 0.914,
+      "train_time": 4.268691700184718,
+      "epochs": 8
+    },
+    {
+      "name": "hidden=(512,)",
+      "factor": "hidden_units",
+      "value": "(512,)",
+      "kind": "custom",
+      "val_acc": 0.9125,
+      "test_acc": 0.92,
+      "train_time": 7.924086099956185,
+      "epochs": 8
+    },
+    {
+      "name": "hidden=(256, 128)",
+      "factor": "hidden_units",
+      "value": "(256, 128)",
+      "kind": "custom",
+      "val_acc": 0.9185,
+      "test_acc": 0.9267,
+      "train_time": 7.4718294001650065,
+      "epochs": 8
+    },
+    {
+      "name": "hidden=(256, 128, 64)",
+      "factor": "hidden_units",
+      "value": "(256, 128, 64)",
+      "kind": "custom",
+      "val_acc": 0.9193333333333333,
+      "test_acc": 0.9258,
+      "train_time": 8.925046499818563,
+      "epochs": 8
+    },
+    {
+      "name": "hidden=(64,64)",
+      "factor": "hidden_units",
+      "value": "(64,64)",
+      "kind": "custom",
+      "val_acc": 0.9015,
+      "test_acc": 0.9098,
+      "train_time": 0.937632100074552,
+      "epochs": 5
+    },
+    {
+      "name": "hidden=(64,128)",
+      "factor": "hidden_units",
+      "value": "(64,128)",
+      "kind": "custom",
+      "val_acc": 0.9006666666666666,
+      "test_acc": 0.91,
+      "train_time": 1.4647235000738874,
+      "epochs": 5
+    },
+    {
+      "name": "hidden=(64,256)",
+      "factor": "hidden_units",
+      "value": "(64,256)",
+      "kind": "custom",
+      "val_acc": 0.9091666666666667,
+      "test_acc": 0.913,
+      "train_time": 2.223963399999775,
+      "epochs": 5
+    },
+    {
+      "name": "hidden=(128,64)",
+      "factor": "hidden_units",
+      "value": "(128,64)",
+      "kind": "custom",
+      "val_acc": 0.9088333333333334,
+      "test_acc": 0.9174,
+      "train_time": 1.6875021001324058,
+      "epochs": 5
+    },
+    {
+      "name": "hidden=(128,128)",
+      "factor": "hidden_units",
+      "value": "(128,128)",
+      "kind": "custom",
+      "val_acc": 0.9068333333333334,
+      "test_acc": 0.9114,
+      "train_time": 2.1720844000810757,
+      "epochs": 5
+    },
+    {
+      "name": "hidden=(128,256)",
+      "factor": "hidden_units",
+      "value": "(128,256)",
+      "kind": "custom",
+      "val_acc": 0.9096666666666666,
+      "test_acc": 0.9159,
+      "train_time": 2.414312600158155,
+      "epochs": 5
+    },
+    {
+      "name": "hidden=(256,64)",
+      "factor": "hidden_units",
+      "value": "(256,64)",
+      "kind": "custom",
+      "val_acc": 0.9068333333333334,
+      "test_acc": 0.9159,
+      "train_time": 3.245621099951677,
+      "epochs": 5
+    },
+    {
+      "name": "hidden=(256,128)",
+      "factor": "hidden_units",
+      "value": "(256,128)",
+      "kind": "custom",
+      "val_acc": 0.8953333333333333,
+      "test_acc": 0.9045,
+      "train_time": 9.05174189992249,
+      "epochs": 5
+    },
+    {
+      "name": "hidden=(256,256)",
+      "factor": "hidden_units",
+      "value": "(256,256)",
+      "kind": "custom",
+      "val_acc": 0.911,
+      "test_acc": 0.9186,
+      "train_time": 9.031002799980342,
+      "epochs": 5
+    },
+    {
+      "name": "25 epoch",
+      "factor": "epochs",
+      "value": 25,
+      "kind": "custom",
+      "val_acc": 0.9461666666666667,
+      "test_acc": 0.9479,
+      "train_time": 20.361359500093386,
+      "epochs": 25
+    },
+    {
+      "name": "25 epoch (sklearn)",
+      "factor": "epochs",
+      "value": 25,
+      "kind": "sklearn",
+      "val_acc": 0.9435,
+      "test_acc": 0.9459,
+      "train_time": 20.62349569995422,
+      "epochs": 25
+    },
+    {
+      "name": "batch=64",
+      "factor": "batch_size",
+      "value": 64,
+      "kind": "custom",
+      "val_acc": 0.9305,
+      "test_acc": 0.9349,
+      "train_time": 33.92033619992435,
+      "epochs": 5
+    },
+    {
+      "name": "batch=128",
+      "factor": "batch_size",
+      "value": 128,
+      "kind": "custom",
+      "val_acc": 0.9103333333333333,
+      "test_acc": 0.9181,
+      "train_time": 22.435314300004393,
+      "epochs": 5
+    },
+    {
+      "name": "batch=256",
+      "factor": "batch_size",
+      "value": 256,
+      "kind": "custom",
+      "val_acc": 0.8953333333333333,
+      "test_acc": 0.9045,
+      "train_time": 7.88947489997372,
+      "epochs": 5
+    },
+    {
+      "name": "batch=512",
+      "factor": "batch_size",
+      "value": 512,
+      "kind": "custom",
+      "val_acc": 0.8665,
+      "test_acc": 0.879,
+      "train_time": 5.322041000123136,
+      "epochs": 5
+    },
+    {
+      "name": "batch=1024",
+      "factor": "batch_size",
+      "value": 1024,
+      "kind": "custom",
+      "val_acc": 0.8581666666666666,
+      "test_acc": 0.8697,
+      "train_time": 5.178892100229859,
+      "epochs": 5
+    },
+    {
+      "name": "l2=0.0",
+      "factor": "l2",
+      "value": 0.0,
+      "kind": "custom",
+      "val_acc": 0.9148333333333334,
+      "test_acc": 0.9209,
+      "train_time": 8.934790900093503,
+      "epochs": 6
+    },
+    {
+      "name": "l2=0.0001",
+      "factor": "l2",
+      "value": 0.0001,
+      "kind": "custom",
+      "val_acc": 0.915,
+      "test_acc": 0.9209,
+      "train_time": 10.456750699901022,
+      "epochs": 6
+    },
+    {
+      "name": "l2=0.001",
+      "factor": "l2",
+      "value": 0.001,
+      "kind": "custom",
+      "val_acc": 0.9141666666666667,
+      "test_acc": 0.9201,
+      "train_time": 6.822830300079659,
+      "epochs": 6
+    },
+    {
+      "name": "l2=0.01",
+      "factor": "l2",
+      "value": 0.01,
+      "kind": "custom",
+      "val_acc": 0.9075,
+      "test_acc": 0.9153,
+      "train_time": 5.297243100125343,
+      "epochs": 6
+    },
+    {
+      "name": "l2=0.1",
+      "factor": "l2",
+      "value": 0.1,
+      "kind": "custom",
+      "val_acc": 0.8205,
+      "test_acc": 0.8273,
+      "train_time": 5.0213970999466255,
+      "epochs": 6
+    }
+  ]
+}

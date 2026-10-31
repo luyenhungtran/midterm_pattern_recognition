@@ -1,4 +1,3 @@
-from __future__ import annotations #trì hoãn việc đánh giá type hints
 import numpy as np
 
 def _softmax(Z):
@@ -39,6 +38,8 @@ class MLPClassifier:
     def _backward(self, X_batch, y_batch):
         activations, prob = self._forward(X_batch)
         grad = prob.copy()
+
+        # Trừ 1 tại vị trí lớp thật của mỗi mẫu, tương đương grad = prob - y_batch_OHE
         grad[np.arange(len(y_batch)), y_batch] -= 1.0
         grad /= len(y_batch)
 
@@ -79,5 +80,5 @@ class MLPClassifier:
     def predict(self, X):
         return self.classes_[np.argmax(self.predict_proba(X), axis=1)]
 
-    def score(self, X, y):
+    def score(self, X, y): # Số lần dự đoán đúng/ tổng số mẫu
         return float(np.mean(self.predict(X) == np.asarray(y)))

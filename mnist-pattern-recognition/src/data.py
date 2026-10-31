@@ -65,6 +65,6 @@ def one_hot(y, num_classes=10):
 def load_prepared_mnist():
     X_train, y_train, X_test, y_test = load_mnist()
     X_train, X_test = preprocess(X_train), preprocess(X_test)
-    y_train = one_hot(y_train)
-    y_test = one_hot(y_test)
+    # y_train = one_hot(y_train)
+    # y_test = one_hot(y_test)
     return X_train, y_train, X_test, y_test
