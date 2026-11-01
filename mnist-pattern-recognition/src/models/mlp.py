@@ -15,7 +15,7 @@ class MLPClassifier:
             l2: float = 1e-4,
             seed: int = 42
     ):
-        self.hidden_units = hidden_units
+        self.hidden_units = [hidden_units] if isinstance(hidden_units, int) else list(hidden_units)
         self.learning_rate = learning_rate
         self.epochs = epochs
         self.batch_size = batch_size
