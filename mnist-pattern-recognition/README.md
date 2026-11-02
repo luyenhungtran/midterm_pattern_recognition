@@ -10,6 +10,7 @@ pip install -r requirements.txt
 ## Chạy
 - Kiểm thử: pytest
 - EDA: mở notebooks/01_eda.ipynb → Run All
+- Gaussian Naive Bayes (tự viết vs scikit-learn): mở notebooks/06_gauss_naive_bayes.ipynb → Run All
 
 ## Cấu trúc thư mục
 (dán cây thư mục ở trên)

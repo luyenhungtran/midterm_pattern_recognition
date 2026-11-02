@@ -6,10 +6,10 @@ class GaussianNB:
 
     def __init__(self, var_smoothing=1e-9):
         self.var_smoothing = var_smoothing
-        self.classes_ = None    # mảng shape (k,)
-        self.priors_ = None    # shape (k,)
-        self.means_ = None     # shape (k, d)
-        self.vars_ = None      # shape (k, d)
+        self.classes_ = None    #  (k,)
+        self.priors_ = None    # (k,)
+        self.means_ = None     #(k, d)
+        self.vars_ = None      #(k, d)
 
     def fit(self, X, y):
         X = np.asarray(X, dtype=float)
