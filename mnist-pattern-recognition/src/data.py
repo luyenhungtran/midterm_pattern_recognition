@@ -1,10 +1,8 @@
-import gzip, hashlib, json, urllib.request
+import gzip, urllib.request
 import numpy as np
-from .config import DATA_DIR, LOG_DIR
+from .config import DATA_DIR
 """
 gzip dùng để giải nén file
-hashlib để tính mã băm SHA256
-json dùng để lưu file thống kê
 urllib.request để tải file theo link URL
 """
 
@@ -57,14 +55,7 @@ def normalize(X):
 def preprocess(X):
     return flatten(normalize(X))
 
-def one_hot(y, num_classes=10):
-    out = np.zeros((len(y), num_classes), dtype=np.float32)
-    out[np.arange(len(y)), y] = 1.0
-    return out
-
 def load_prepared_mnist():
     X_train, y_train, X_test, y_test = load_mnist()
     X_train, X_test = preprocess(X_train), preprocess(X_test)
-    # y_train = one_hot(y_train)
-    # y_test = one_hot(y_test)
     return X_train, y_train, X_test, y_test

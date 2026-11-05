@@ -64,7 +64,6 @@ class SoftmaxRegression:
                     self.best_epoch_ = epoch + 1
                 else:
                     stale += 1
-            self.n_iter_ = epoch + 1
             if self.verbose and (epoch == 0 or (epoch + 1) % 10 == 0):
                 msg = f'Epoch {epoch + 1:3d} | train CE={train_loss:.4f} | acc={train_acc:.4f}'
                 if X_val is not None:

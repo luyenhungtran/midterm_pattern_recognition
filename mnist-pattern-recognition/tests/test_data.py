@@ -10,7 +10,3 @@ def test_mnist_contract():
     assert X_tr.min() >= 0 and X_tr.max() <=255
     assert set(np.unique(y_tr)) == set(range(10))
     assert set(np.unique(y_te)) == set(range(10))
-
-
-
-    
