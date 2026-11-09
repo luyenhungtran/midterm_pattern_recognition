@@ -1,0 +1,2 @@
+learning_rate,max_depth,n_estimators,accuracy,f1_macro
+0.2,2.0,100.0,0.9853,0.9852351641292223

@@ -1,0 +1,22 @@
+﻿method,parameter,value,validation_f1
+Gaussian NB,vs,1e-12,0.47862918558465795
+Gaussian NB,vs,1e-09,0.5252852123917611
+Gaussian NB,vs,1e-06,0.6044192898832778
+Gaussian NB,vs,0.001,0.7599957246839992
+Gaussian NB,vs,0.1,0.7593841240515742
+Gaussian NB,vs,1.0,0.6694313704903856
+Softmax,learning_rate,0.001,0.8741808567650237
+Softmax,learning_rate,0.01,0.9077505862227001
+Softmax,learning_rate,0.1,0.9201558286111252
+Softmax,learning_rate,0.5,0.9217988694676889
+Softmax,learning_rate,1.0,0.9216476159952256
+MLP,epochs,2.0,0.9208358940426672
+MLP,epochs,5.0,0.9471086644476759
+MLP,epochs,10.0,0.9611867845465156
+MLP,epochs,20.0,0.9675727822232977
+MLP,epochs,50.0,0.977993828260644
+Stacking AdaBoost,learning_rate,0.01,0.7244674330201768
+Stacking AdaBoost,learning_rate,0.1,0.9833392107181629
+Stacking AdaBoost,learning_rate,0.2,0.9852351641292223
+Stacking AdaBoost,learning_rate,0.5,0.984541401882489
+Stacking AdaBoost,learning_rate,1.0,0.9821421507793342

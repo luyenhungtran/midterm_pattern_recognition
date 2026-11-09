@@ -1,0 +1,89 @@
+{
+  "seed": 42,
+  "validation_fraction": 0.1,
+  "stratified": true,
+  "n_train": 50000,
+  "n_validation": 10000,
+  "n_test": 10000,
+  "input_dtype": "float32",
+  "baseline": {
+    "hidden_units": [
+      256,
+      128
+    ],
+    "learning_rate": 0.08,
+    "epochs": 20,
+    "batch_size": 256,
+    "l2": 0.0001
+  },
+  "grids": {
+    "learning_rate": [
+      0.001,
+      0.01,
+      0.05,
+      0.08,
+      0.1
+    ],
+    "architecture": [
+      [
+        128
+      ],
+      [
+        256
+      ],
+      [
+        128,
+        64
+      ],
+      [
+        256,
+        128,
+        64
+      ]
+    ],
+    "epochs": [
+      2,
+      5,
+      10,
+      20,
+      50
+    ],
+    "l2": [
+      0.0,
+      1e-05,
+      0.0001,
+      0.001,
+      0.01
+    ],
+    "batch_size": [
+      32,
+      64,
+      128,
+      256,
+      512
+    ]
+  },
+  "final_manual": {
+    "hidden_units": [
+      256,
+      128,
+      64
+    ],
+    "learning_rate": 0.1,
+    "epochs": 50,
+    "batch_size": 32,
+    "l2": 1e-05
+  },
+  "final_sklearn": {
+    "hidden": [
+      256,
+      128,
+      64
+    ],
+    "lr": 0.1,
+    "epochs": 50,
+    "batch": 32,
+    "l2": 0.01
+  },
+  "selection": "Combine best values from separate validation sweeps"
+}

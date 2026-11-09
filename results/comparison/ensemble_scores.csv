@@ -1,0 +1,7 @@
+﻿model,Validation,Test
+SVM,0.9833,0.9833
+KNN,0.972,0.97
+MLP256_128,0.9819,0.9826
+Soft voting,0.9852,0.9852
+Weighted soft voting,0.9852,0.9852
+Stacking AdaBoost,0.9853,0.9854

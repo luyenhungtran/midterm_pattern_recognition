@@ -1,0 +1,5 @@
+﻿method,strength,limitation,interpretability
+Gaussian NB,Fit bằng thống kê theo lớp; tham số có ý nghĩa xác suất,Giả định độc lập có điều kiện/Gaussian hạn chế mô tả ảnh,"Có thể xem prior, mean, variance; 784 pixel vẫn khó giải thích từng quyết định"
+Softmax,"Mô hình gọn; logit tuyến tính, trực quan được bản đồ trọng số",Không biểu diễn trực tiếp tương tác phi tuyến giữa pixel,Đóng góp tuyến tính theo lớp; trọng số không phải bằng chứng nhân quả
+MLP,Học tương tác phi tuyến; suy luận bằng chuỗi nhân ma trận,"Phụ thuộc tối ưu, kiến trúc và regularization; có thể khớp train quá mức",Biểu diễn ẩn khó diễn giải trực tiếp hơn mô hình tuyến tính
+Stacking AdaBoost,Kết hợp dự đoán của nhiều họ mô hình bằng đặc trưng OOF,Fit OOF/refit tốn chi phí; tăng test nhỏ chưa đủ chứng minh ưu thế ổn định,Cần giải thích cả base models và meta-model; importance của meta không giải thích trực tiếp pixel

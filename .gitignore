@@ -1,0 +1,43 @@
+# Môi trường Python
+.venv/
+venv/
+env/
+ENV/
+
+# Bytecode, cache và notebook checkpoints
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+/results/**/cache/
+
+# Dữ liệu MNIST: tải lại bằng src/data.py
+/data/
+
+# Model và mảng trung gian; giữ CSV, JSON, hình và báo cáo
+*.joblib
+*.pkl
+*.pickle
+*.pt
+*.pth
+*.npy
+*.npz
+
+# Giữ chỉ số chia tập để đối chiếu thí nghiệm
+!/results/**/split_indices.npz
+
+# Cấu hình riêng tư
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# File hệ điều hành và file tạm
+.DS_Store
+Thumbs.db
+Desktop.ini
+~$*
+*.tmp
+*.swp

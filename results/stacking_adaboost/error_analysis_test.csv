@@ -1,0 +1,3 @@
+reference,corrected_errors,introduced_errors,net_errors_reduced
+SVM,40,19,21
+Soft voting,20,18,2

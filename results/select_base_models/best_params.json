@@ -1,0 +1,20 @@
+{
+  "SVM": {
+    "C": 10
+  },
+  "Softmax_sklearn": {
+    "C": 0.1
+  },
+  "RandomForest": {
+    "min_samples_leaf": 1
+  },
+  "KNN": {
+    "n_neighbors": 3
+  },
+  "ExtraTrees": {
+    "min_samples_leaf": 1
+  },
+  "MLP256_128": {
+    "alpha": 0.01
+  }
+}

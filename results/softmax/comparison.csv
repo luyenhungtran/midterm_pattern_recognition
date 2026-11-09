@@ -1,0 +1,2 @@
+model,split,accuracy,precision_macro,recall_macro,f1_macro,fit_seconds,predict_seconds
+Softmax tự viết,Test,0.9253,0.9243962024602725,0.9240858840270837,0.9241013185900906,11.923308699999325,0.005377999999836902

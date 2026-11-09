@@ -1,0 +1,183 @@
+{
+  "versions": {
+    "python": "3.14.7",
+    "numpy": "2.5.4",
+    "sklearn": "1.9.1",
+    "pandas": "3.1.1"
+  },
+  "seed": 42,
+  "selected_models": [
+    "SVM",
+    "KNN",
+    "MLP256_128"
+  ],
+  "candidate_groups": [
+    [
+      "SVM",
+      "KNN",
+      "MLP256_128"
+    ],
+    [
+      "SVM",
+      "RandomForest",
+      "MLP256_128"
+    ],
+    [
+      "SVM",
+      "ExtraTrees",
+      "MLP256_128"
+    ]
+  ],
+  "selection_rule": "equal-weight probability voting; voting_accuracy, voting_f1, lower mean_double_fault, combo name; prediction=argmax(predict_proba)",
+  "voting_accuracy": 0.9852,
+  "voting_f1": 0.9851462163304756,
+  "common_errors": 81,
+  "overlap_ratio": 0.48502994011976047,
+  "all_params": {
+    "SVM": {
+      "C": 10,
+      "break_ties": false,
+      "cache_size": 1000,
+      "class_weight": null,
+      "coef0": 0.0,
+      "decision_function_shape": "ovr",
+      "degree": 3,
+      "gamma": "scale",
+      "kernel": "rbf",
+      "max_iter": -1,
+      "probability": true,
+      "random_state": 42,
+      "shrinking": true,
+      "tol": 0.001,
+      "verbose": false
+    },
+    "Softmax_sklearn": {
+      "C": 0.1,
+      "class_weight": null,
+      "dual": false,
+      "fit_intercept": true,
+      "intercept_scaling": 1,
+      "l1_ratio": 0.0,
+      "max_iter": 1000,
+      "n_jobs": null,
+      "penalty": "deprecated",
+      "random_state": null,
+      "solver": "lbfgs",
+      "tol": 0.0001,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "RandomForest": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": null,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 200,
+      "n_jobs": -1,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "KNN": {
+      "algorithm": "auto",
+      "leaf_size": 30,
+      "metric": "minkowski",
+      "metric_params": null,
+      "n_jobs": -1,
+      "n_neighbors": 3,
+      "p": 2,
+      "weights": "distance"
+    },
+    "ExtraTrees": {
+      "bootstrap": false,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": null,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 200,
+      "n_jobs": -1,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "MLP256_128": {
+      "activation": "relu",
+      "alpha": 0.01,
+      "batch_size": 256,
+      "beta_1": 0.9,
+      "beta_2": 0.999,
+      "early_stopping": false,
+      "epsilon": 1e-08,
+      "hidden_layer_sizes": [
+        256,
+        128
+      ],
+      "learning_rate": "constant",
+      "learning_rate_init": 0.001,
+      "max_fun": 15000,
+      "max_iter": 60,
+      "momentum": 0.9,
+      "n_iter_no_change": 61,
+      "nesterovs_momentum": true,
+      "power_t": 0.5,
+      "random_state": 42,
+      "shuffle": true,
+      "solver": "adam",
+      "tol": 0,
+      "validation_fraction": 0.1,
+      "verbose": false,
+      "warm_start": false
+    }
+  },
+  "data_fingerprint": {
+    "X_train": {
+      "shape": [
+        50000,
+        784
+      ],
+      "dtype": "float32",
+      "sha256": "a3c21af7008094b04707e41894986d65935a33bdc8d94128811c554269c0152a"
+    },
+    "y_train": {
+      "shape": [
+        50000
+      ],
+      "dtype": "int64",
+      "sha256": "8d092769602216a689c5aa7924df9f0c467fccdb1a5be9c805a206a47ca82da5"
+    },
+    "X_val": {
+      "shape": [
+        10000,
+        784
+      ],
+      "dtype": "float32",
+      "sha256": "9bee4b81ef9f7eb6dab9d27ea34ca9671a601c97eac6af3e8bc1aa39984cf494"
+    },
+    "y_val": {
+      "shape": [
+        10000
+      ],
+      "dtype": "int64",
+      "sha256": "f639a340f73cacaf5e3c456619d7b1975a31fec9b280b04f529fe855ee2ec031"
+    }
+  }
+}

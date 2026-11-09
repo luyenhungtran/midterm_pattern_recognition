@@ -1,0 +1,5 @@
+﻿method,configuration,implementation,selection
+Gaussian NB,var_smoothing=0.001,Ước lượng thống kê theo lớp,Giá trị cuối được giữ từ notebook nguồn
+Softmax,lr=0.5; L2=2e-05; batch=256; epochs=100,Mini-batch GD; checkpoint epoch 58,"Sequential search; validation F1 macro, CE breaks ties"
+MLP,784 → 256 → 128 → 64 → 10; lr=0.1; L2=1e-05; batch=32; epochs=50,NumPy; backpropagation ; SGD,Combine best values from separate validation sweeps
+Stacking AdaBoost,"5-fold OOF; SVM, KNN, MLP256_128; meta: depth=2, lr=0.2, trees=100",Base learners + AdaBoost thư viện; stacking,Đọc bộ ba model từ file chọn

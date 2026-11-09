@@ -1,0 +1,4 @@
+split,X_shape,y_shape,X_dtype,y_dtype,pixel_min,pixel_max,nonfinite
+Train,"(50000, 784)","(50000,)",float32,uint8,0.0,1.0,0
+Validation,"(10000, 784)","(10000,)",float32,uint8,0.0,1.0,0
+Test,"(10000, 784)","(10000,)",float32,uint8,0.0,1.0,0

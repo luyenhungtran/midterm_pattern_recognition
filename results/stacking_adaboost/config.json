@@ -1,0 +1,81 @@
+{
+  "selection_source": "select_base_models/selection.json",
+  "group_selection": "selected_models from notebook 05; candidate groups not searched",
+  "prediction_rule": "argmax(predict_proba)",
+  "data_fingerprint": {
+    "X_train": {
+      "shape": [
+        50000,
+        784
+      ],
+      "dtype": "float32",
+      "sha256": "a3c21af7008094b04707e41894986d65935a33bdc8d94128811c554269c0152a"
+    },
+    "y_train": {
+      "shape": [
+        50000
+      ],
+      "dtype": "int64",
+      "sha256": "8d092769602216a689c5aa7924df9f0c467fccdb1a5be9c805a206a47ca82da5"
+    },
+    "X_val": {
+      "shape": [
+        10000,
+        784
+      ],
+      "dtype": "float32",
+      "sha256": "9bee4b81ef9f7eb6dab9d27ea34ca9671a601c97eac6af3e8bc1aa39984cf494"
+    },
+    "y_val": {
+      "shape": [
+        10000
+      ],
+      "dtype": "int64",
+      "sha256": "f639a340f73cacaf5e3c456619d7b1975a31fec9b280b04f529fe855ee2ec031"
+    }
+  },
+  "best_single_model": "SVM",
+  "voting_weights": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "voting_weight_model_order": [
+    "SVM",
+    "KNN",
+    "MLP256_128"
+  ],
+  "weighted_voting_search_seconds": 0.03753010000218637,
+  "weighted_voting_selection": "validation accuracy, then macro F1; equal weights first on ties",
+  "seed": 42,
+  "folds": 5,
+  "model_order": [
+    "SVM",
+    "KNN",
+    "MLP256_128"
+  ],
+  "classes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "cache_enabled": false,
+  "learning_rate": 0.2,
+  "max_depth": 2,
+  "n_estimators": 100,
+  "actual_estimators": 100,
+  "oof_wall_seconds": 5076.7606638,
+  "refit_wall_seconds": 1417.121510500001,
+  "pipeline_training_wall_seconds": 6514.6241722999985,
+  "recorded_stack_fit_seconds": 6513.241315600026,
+  "meta_search_fit_seconds": 220.1557155000046,
+  "meta_final_fit_seconds": 20.741997999997693,
+  "sklearn_version": "1.9.1"
+}

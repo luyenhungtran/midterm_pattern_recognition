@@ -1,0 +1,49 @@
+{
+  "methods": [
+    "Gaussian NB",
+    "Softmax",
+    "MLP",
+    "Stacking AdaBoost"
+  ],
+  "splits": [
+    "Train",
+    "Validation",
+    "Test"
+  ],
+  "seed": 42,
+  "output_tables": [
+    "protocol.csv",
+    "final_configurations.csv",
+    "metrics_all_splits.csv",
+    "test_comparison.csv",
+    "generalization_gaps.csv",
+    "timing.csv",
+    "per_class_test.csv",
+    "top_confusions.csv",
+    "weakest_classes.csv",
+    "paired_errors_manual_test.csv",
+    "sklearn_comparison.csv",
+    "gaussian_matched_epsilon_check.csv",
+    "hyperparameter_effects.csv",
+    "base_selection_validation.csv",
+    "ensemble_test.csv",
+    "ensemble_scores.csv",
+    "stacking_error_analysis_test.csv",
+    "cnn_mlp_test.csv",
+    "augmentation_test.csv",
+    "augmentation_effect.csv",
+    "robustness.csv",
+    "robustness_augmentation_gains.csv"
+  ],
+  "output_figures": [
+    "scores_by_split.png",
+    "timing.png",
+    "accuracy_vs_prediction_time.png",
+    "confusion_matrices_normalized.png",
+    "recall_by_digit.png",
+    "hyperparameter_effects.png",
+    "stacking_error_tradeoff.png",
+    "augmentation_effect.png",
+    "robustness_comparison.png"
+  ]
+}

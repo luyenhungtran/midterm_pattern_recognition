@@ -1,0 +1,2 @@
+model,split,accuracy,precision_macro,recall_macro,f1_macro,fit_seconds,predict_seconds
+Stacking AdaBoost,Test,0.9854,0.9854016341722097,0.9853378893686063,0.9853625072533626,6513.241315600026,50.71464290001313

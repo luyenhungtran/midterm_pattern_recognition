@@ -1,0 +1,4 @@
+﻿reference,candidate,both_wrong,corrected_errors,introduced_errors,net_errors_reduced
+Gaussian NB,Softmax,559,1688,188,1500
+Softmax,MLP,140,607,41,566
+Gaussian NB,MLP,138,2109,43,2066

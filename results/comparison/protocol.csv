@@ -1,0 +1,5 @@
+﻿method,seed,Train,Validation,Test
+Gaussian NB,42,50000,10000,10000
+Softmax,42,50000,10000,10000
+MLP,42,50000,10000,10000
+Stacking AdaBoost,42,50000,10000,10000

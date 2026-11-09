@@ -1,0 +1,53 @@
+{
+  "learning_rate": 0.5,
+  "l2": 2e-05,
+  "epochs": 100,
+  "batch_size": 256,
+  "seed": 42,
+  "baseline_l2": 2e-05,
+  "learning_rate_grid": [
+    0.001,
+    0.01,
+    0.1,
+    0.5,
+    1.0
+  ],
+  "l2_grid": [
+    0,
+    0.0001,
+    0.001,
+    0.01
+  ],
+  "patience": null,
+  "best_epoch": 58,
+  "n_iter": 100,
+  "dtype": "float32",
+  "weight_dtype": "float32",
+  "train_samples": 50000,
+  "validation_samples": 10000,
+  "test_samples": 10000,
+  "search_seconds": 103.6912906000216,
+  "final_fit_seconds": 11.150641900007031,
+  "final_fit_included_in_search": true,
+  "sklearn_fit_seconds": 431.2134484999988,
+  "selection": "Sequential search; validation F1 macro, CE breaks ties",
+  "checkpoint": "Validation CE; improvement threshold 1e-6",
+  "sklearn_C": 1.0,
+  "sklearn_params": {
+    "C": 1.0,
+    "class_weight": null,
+    "dual": false,
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "l1_ratio": 0.0,
+    "max_iter": 300,
+    "n_jobs": null,
+    "penalty": "deprecated",
+    "random_state": null,
+    "solver": "lbfgs",
+    "tol": 0.0001,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "sklearn_version": "1.9.1"
+}

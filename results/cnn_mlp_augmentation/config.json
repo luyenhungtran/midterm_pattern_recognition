@@ -1,0 +1,44 @@
+{
+  "seed": 42,
+  "epochs": 15,
+  "batch_size": 256,
+  "learning_rate": 0.01,
+  "momentum": 0.9,
+  "optimizer": "SGD",
+  "parameters": {
+    "MLP260": 206710,
+    "CNN_FC128": 206922
+  },
+  "checkpoint": "minimum clean validation CE",
+  "augmentation": {
+    "rotation_degrees": 30.0,
+    "translation_pixels": 4.0,
+    "gaussian_std": 0.1,
+    "pixel_clip": [
+      0,
+      1
+    ],
+    "train_only": true,
+    "shared_between_models": true
+  },
+  "preprocessing": "loader pixel /255; N,1,28,28",
+  "robustness": {
+    "split": "Test",
+    "shifts": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "rotations": [
+      0,
+      10,
+      20,
+      30
+    ],
+    "noise": false
+  },
+  "device": "cpu",
+  "torch_version": "2.15.0+cpu"
+}

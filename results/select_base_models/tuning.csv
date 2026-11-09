@@ -1,0 +1,19 @@
+model,params,f1_macro,accuracy,fit_seconds,warning
+SVM,{'C': 1},0.9743655441948074,0.9746,139.66980670001067,
+SVM,{'C': 3},0.9791191784657836,0.9793,126.63386089999403,
+SVM,{'C': 10},0.9792286253504198,0.9794,130.52833739999915,
+Softmax_sklearn,{'C': 0.01},0.9112681525623394,0.9124,91.2761795999977,
+Softmax_sklearn,{'C': 0.1},0.9168403918223451,0.918,111.98544170000241,
+Softmax_sklearn,{'C': 1},0.9163915365748275,0.9175,208.3938019000052,
+RandomForest,{'min_samples_leaf': 1},0.9646453472306975,0.965,9.478688900009729,
+RandomForest,{'min_samples_leaf': 2},0.9635443766111997,0.9639,8.749855699992622,
+RandomForest,{'min_samples_leaf': 4},0.9600487062650599,0.9604,8.329879700002493,
+KNN,{'n_neighbors': 3},0.9691691575213717,0.9694,0.0551463000010699,
+KNN,{'n_neighbors': 5},0.9689707814610392,0.9692,0.049893899995367974,
+KNN,{'n_neighbors': 7},0.9679050650668561,0.9681,0.07036700000753626,
+ExtraTrees,{'min_samples_leaf': 1},0.9675482101406058,0.9679,7.890403299999889,
+ExtraTrees,{'min_samples_leaf': 2},0.9637985399648885,0.9642,7.372881799994502,
+ExtraTrees,{'min_samples_leaf': 4},0.9601088601388034,0.9605,7.004750199994305,
+MLP256_128,{'alpha': 0.0001},0.976991013553777,0.9772,313.24495829999796,Stochastic Optimizer: Maximum iterations (60) reached and the optimization hasn't converged yet.
+MLP256_128,{'alpha': 0.001},0.9794155853185167,0.9796,314.26936900000146,Stochastic Optimizer: Maximum iterations (60) reached and the optimization hasn't converged yet.
+MLP256_128,{'alpha': 0.01},0.9795128061025922,0.9797,387.4526590999885,Stochastic Optimizer: Maximum iterations (60) reached and the optimization hasn't converged yet.

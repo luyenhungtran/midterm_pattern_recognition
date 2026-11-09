@@ -1,0 +1,4 @@
+﻿đại lượng,shape,sai khác tuyệt đối lớn nhất,khớp
+priors_ / class_prior_,"(10,)",0.0,True
+means_ / theta_,"(10, 784)",0.0,True
+vars_ / var_,"(10, 784)",0.0,True

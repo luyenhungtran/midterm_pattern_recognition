@@ -1,0 +1,5 @@
+﻿method,search_seconds,scope
+Gaussian NB,,Không có tổng search time trong config hiện tại
+Softmax,103.6912906000216,LR/L2; config ghi đã gồm final fit tái sử dụng
+MLP,,Không có tổng search time; không cộng suy đoán từ các sweep
+Stacking AdaBoost,220.1557155000046,Chỉ meta-search; chưa gồm notebook 05

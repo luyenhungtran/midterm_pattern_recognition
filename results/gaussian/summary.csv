@@ -1,0 +1,8 @@
+﻿tiêu chí,giá trị
+"Accuracy (validation, mặc định)",0.5648
+"F1-macro (validation, mặc định)",0.5252852123917611
+Accuracy (test),0.7753
+F1-macro (test),0.7716108540470502
+Thời gian fit (s),0.41061669998453
+Thời gian predict test (s),1.147384099982446
+Tỉ lệ dự đoán trùng sklearn (test),0.8944
