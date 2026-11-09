@@ -165,9 +165,6 @@ Nếu đang dùng bản cũ của `notebooks/07_comparison.ipynb` hoặc `app/ap
 - [Báo cáo đồ án (PDF)](report/bao_cao.pdf)
 - [Slide thuyết trình (PPTX)](report/Slide.pptx)
 
-## Tệp theo dõi bằng Git
-
-Theo dõi mã nguồn, notebook, báo cáo và các bảng, biểu đồ dùng để trình bày kết quả. Dữ liệu tải về, môi trường ảo và checkpoint được bỏ qua theo `.gitignore`. Một số tệp đầu ra bị bỏ qua vẫn cần cho notebook tổng hợp và demo, vì vậy hãy giữ chúng trên máy hoặc tạo lại từ notebook nguồn.
 
 ## Tài liệu tham khảo
 
