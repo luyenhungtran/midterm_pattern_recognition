@@ -162,7 +162,7 @@ Nếu đang dùng bản cũ của `notebooks/07_comparison.ipynb` hoặc `app/ap
 
 ## Báo cáo và slide
 
-- [Báo cáo đồ án (PDF)](report/bao_cao.pdf)
+- [Báo cáo đồ án (PDF)](report/bao_cao_do_an.pdf)
 - [Slide thuyết trình (PPTX)](report/slide_bao_cao.pdf)
 
 
